@@ -2,7 +2,7 @@ package menjacnica;
 
 import java.util.GregorianCalendar;
 
-public class Menjacnica {
+public class Valuta {
 	
 	private String nazivValute;
 	private String skracenNaziv;
@@ -10,8 +10,6 @@ public class Menjacnica {
 	private int kupovni;
 	private int srednji;
 	private GregorianCalendar datum = new GregorianCalendar();
-	
-	
 	
 	public String getNazivValute() {
 		return nazivValute;
@@ -70,7 +68,7 @@ public class Menjacnica {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Menjacnica other = (Menjacnica) obj;
+		Valuta other = (Valuta) obj;
 		if (datum == null) {
 			if (other.datum != null)
 				return false;
