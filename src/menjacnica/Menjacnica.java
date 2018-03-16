@@ -10,9 +10,10 @@ public class Menjacnica implements MenjacnicaInterfejs {
 	private LinkedList<Valuta> valute = new LinkedList<>();
 
 	@Override
-	public void unesiKursValuteZaDatum(String skracenNaziv, int kupovni, int prodajni, int srednji,
+	public void unesiKursValuteZaDatum(String naziv, String skracenNaziv, int kupovni, int prodajni, int srednji,
 			GregorianCalendar datum) {
 		Valuta v = new Valuta();
+		v.setNazivValute(naziv);
 		v.setSkracenNaziv(skracenNaziv);
 		v.setDatum(datum);
 		v.setProdajni(prodajni);
