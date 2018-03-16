@@ -6,45 +6,51 @@ public class Valuta {
 	
 	private String nazivValute;
 	private String skracenNaziv;
-	private int prodajni;
-	private int kupovni;
-	private int srednji;
+	private double prodajni;
+	private double kupovni;
+	private double srednji;
 	private GregorianCalendar datum = new GregorianCalendar();
 	
 	public String getNazivValute() {
 		return nazivValute;
 	}
 	public void setNazivValute(String nazivValute) {
+		if(nazivValute == null || nazivValute.isEmpty()) throw new RuntimeException("Morate uneti naziv");
 		this.nazivValute = nazivValute;
 	}
 	public String getSkracenNaziv() {
 		return skracenNaziv;
 	}
 	public void setSkracenNaziv(String skracenNaziv) {
+		if(skracenNaziv == null || skracenNaziv.isEmpty()) throw new RuntimeException("Morate uneti skracenicu");
 		this.skracenNaziv = skracenNaziv;
 	}
-	public int getProdajni() {
+	public double getProdajni() {
 		return prodajni;
 	}
 	public void setProdajni(int prodajni) {
+		if(prodajni < 0) throw new RuntimeException("Prodajni kurs ne moze biti negativan");
 		this.prodajni = prodajni;
 	}
-	public int getKupovni() {
+	public double getKupovni() {
 		return kupovni;
 	}
 	public void setKupovni(int kupovni) {
+		if(kupovni < 0) throw new RuntimeException("Kupovni kurs ne moze biti negativan");
 		this.kupovni = kupovni;
 	}
-	public int getSrednji() {
+	public double getSrednji() {
 		return srednji;
 	}
 	public void setSrednji(int srednji) {
+		if(srednji < 0) throw new RuntimeException("Srednji kurs ne moze biti negativan");
 		this.srednji = srednji;
 	}
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
+		if(datum == null) throw new RuntimeException("Morate uneti datum");
 		this.datum = datum;
 	}
 	@Override
